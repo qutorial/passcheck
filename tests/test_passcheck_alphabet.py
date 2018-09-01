@@ -1,3 +1,4 @@
+# coding: utf8
 import unittest
 from passcheck.alphabet import check_alphabet as ca
 from passcheck.alphabet import AlphabetError
@@ -26,7 +27,7 @@ class TestPasscheckPasswordAlphabet(unittest.TestCase):
     self.assertEqual(ca("33"), (False, AlphabetError.SHORT_PASS))
 
   def test_short_five(self):
-    self.assertEqual(ca("öÜ"), (False, AlphabetError.SHORT_PASS))
+    self.assertEqual(ca(r"öÜ"), (False, AlphabetError.SHORT_PASS))
 
   def test_regex_ddos(self):
     self.assertEqual(ca("A"*15000), (False, AlphabetError.TOO_LONG))

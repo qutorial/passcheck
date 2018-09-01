@@ -1,3 +1,2 @@
 export PYTHONPATH=`readlink -f .`
-python -m unittest `basename tests/*.py`
-
+python -m unittest

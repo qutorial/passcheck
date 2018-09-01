@@ -1,3 +1,4 @@
+# coding: utf8
 import unittest
 from passcheck.length import check_length as cl
 from passcheck.length import LengthError
