@@ -2,4 +2,4 @@ env
 seclists
 __pycache__
 *.pyc
-
+*.swp
